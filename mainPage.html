@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diplom Main Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="app.js"></script>
+    <script src="test_run.json"></script>
+    <script src="languages.json"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<div id="todo">
+    <h1 class="title">Developer Roadmaps</h1>
+    <div class="text-center" id="buttons">
+        <button class="button" type="button" id="full stack" onclick="roadmap('Full Stack')">Full Stack</button>
+        <button class="button" type="button" id="csharp" onclick="roadmap('c#')">C#</button>
+        <button class="button" type="button" id="php" onclick="roadmap('PHP')">PHP</button>
+        <button class="button" type="button" id="android" onclick="roadmap('Android')">Android</button>
+        <button class="button" type="button" id="c++" onclick="roadmap('C++')">C++</button>
+        <button class="button" type="button" id="js" onclick="roadmap('JS')">JS</button>
+        <button class="button" type="button" id=".net" onclick="roadmap('.NET')">.NET</button>
+        <button class="button" type="button" id="python" onclick="roadmap('Python')">Python</button>
+    </div>
+    <div>
+        <table id="all" style="align-content: center; width: 100%; table-layout: fixed">
+            <td class="customTd">
+                <p class="links" id="allCoreP"></p>
+                <table class="text-area" id="result"></table>
+            </td>
+            <td class="customTd">
+                <p class="links" id="juniorP"></p>
+                <table class="text-area" id="junior"></table>
+            </td>
+            <td class="customTd">
+                <p class="links" id="middleP"></p>
+                <table class="text-area" id="middle"></table>
+            </td>
+            <td class="customTd">
+                <p class="links" id="seniorP"></p>
+                <table class="text-area" id="senior"></table>
+            </td>
+        </table>
+    </div>
+    <div>
+        <p class="links" id="links"></p>
+    </div>
+    <div>
+        <table class="text-area" id="additionalUrls"></table>
+    </div>
+    <script type="text/javascript">
+        function roadmap(text) {
+            let mainInf = [];
+            let urls = ''
+            let links = document.getElementById('links');
+            let allCore = document.getElementById('allCoreP');
+            let junior = document.getElementById('juniorP');
+            let middle = document.getElementById('middleP');
+            let senior = document.getElementById('seniorP');
+            let table = document.getElementById('result');
+            let juniorTable = document.getElementById('junior');
+            let middleTable = document.getElementById('middle');
+            let seniorTable = document.getElementById('senior');
+            let tableAdUrls = document.getElementById('additionalUrls');
+            table.innerHTML = '';
+            juniorTable.innerHTML = '';
+            middleTable.innerHTML = '';
+            seniorTable.innerHTML = '';
+            tableAdUrls.innerHTML = '';
+            links.textContent = '';
+            allCore.textContent = 'All core skills';
+            junior.textContent = 'Skills for Junior';
+            middle.textContent = 'Skills for Middle';
+            senior.textContent = 'Skills for Senior';
+
+            $.getJSON('test_run.json', function (data) {
+                mainInf = getRoadmap(data, text);
+            }).then( function () {
+                for (let number = 0; number < mainInf[0].length; number++) {
+                    if (number === 20) {
+                        break;
+                    }
+
+                    let row = table.insertRow(number);
+                    let column = row.insertCell(0);
+                    let column1 = row.insertCell(1);
+                    column.innerHTML = mainInf[0][number][0];
+                    column1.innerHTML = mainInf[0][number][1];
+                }
+
+                for (let number = 0; number < mainInf[1].length; number++) {
+                    if (number === 20) {
+                        break;
+                    }
+
+                    let row = juniorTable.insertRow(number);
+                    let column = row.insertCell(0);
+                    let column1 = row.insertCell(1);
+                    column.innerHTML = mainInf[1][number][0];
+                    column1.innerHTML = mainInf[1][number][1];
+                }
+
+                for (let number = 0; number < mainInf[2].length; number++) {
+                    if (number === 20) {
+                        break;
+                    }
+
+                    let row = middleTable.insertRow(number);
+                    let column = row.insertCell(0);
+                    let column1 = row.insertCell(1);
+                    column.innerHTML = mainInf[2][number][0];
+                    column1.innerHTML = mainInf[2][number][1];
+                }
+
+                for (let number = 0; number < mainInf[3].length; number++) {
+                    if (number === 20) {
+                        break;
+                    }
+
+                    let row = seniorTable.insertRow(number);
+                    let column = row.insertCell(0);
+                    let column1 = row.insertCell(1);
+                    column.innerHTML = mainInf[3][number][0];
+                    column1.innerHTML = mainInf[3][number][1];
+                }
+
+                $.getJSON('languages.json', function (data) {
+                    urls = getUrls(data, text);
+                    links.textContent = "Useful links for " + text;
+                }).then( function () {
+                    for (let number = 0; number < urls.length; number++) {
+                        let row = tableAdUrls.insertRow(number);
+                        let column = row.insertCell(0);
+                        let column1 = row.insertCell(1);
+                        column.innerHTML = urls[number][0];
+                        column1.innerHTML = urls[number][1];
+                    }
+                });
+
+            });
+        }
+    </script>
+</div>
+</body>
+</html>

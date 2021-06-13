@@ -1,0 +1,63 @@
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    color: blueviolet;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button {
+    font-family: monospace;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.button:active, .button:visited {
+    background-color: darkgreen;
+}
+
+.text-area {
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    margin: 30px auto auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+
+.customTd {
+    border: 0 white;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px 15px;
+}
+
+th {
+    border: 1px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+}
+
+.links {
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    margin: 30px;
+    color: blueviolet;
+}

@@ -1,0 +1,140 @@
+{
+  "languages": [
+    {
+      "name": "Full Stack",
+      "urls": [
+        {
+          "url": "https://learn.javascript.ru/",
+          "explanation": "JavaScript"
+        },
+        {
+          "url": "http://htmlbook.ru/html",
+          "explanation": "HTML"
+        },
+        {
+          "url": "https://git-scm.com/book/ru/v2",
+          "explanation": "GIT"
+        }
+      ]
+    },
+    {
+      "name": "C#",
+      "urls": [
+        {
+          "url": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+          "explanation": "C#"
+        },
+        {
+          "url": "https://git-scm.com/book/ru/v2",
+          "explanation": "GIT"
+        },
+        {
+          "url": "https://metanit.com/sql/postgresql/1.1.php",
+          "explanation": "PostgreSQL"
+        }
+      ]
+    },
+    {
+      "name": "PHP",
+      "urls": [
+        {
+          "url": "https://www.php.net/manual/ru/index.php",
+          "explanation": "PHP"
+        },
+        {
+          "url": "https://git-scm.com/book/ru/v2",
+          "explanation": "GIT"
+        },
+        {
+          "url": "http://htmlbook.ru/html",
+          "explanation": "HTML"
+        }
+      ]
+    },
+    {
+      "name": "Android",
+      "urls": [
+        {
+          "url": "https://developer.android.com/",
+          "explanation": "Android"
+        },
+        {
+          "url": "https://developer.android.com/kotlin/",
+          "explanation": "Kotlin"
+        },
+        {
+          "url": "https://tproger.ru/translations/sql-recap/",
+          "explanation": "SQL"
+        }
+      ]
+    },
+    {
+      "name": "C++",
+      "urls": [
+        {
+          "url": "https://ravesli.com/uroki-cpp/",
+          "explanation": "C++"
+        },
+        {
+          "url": "https://metanit.com/sql/postgresql/1.1.php",
+          "explanation": "PostgreSQL"
+        },
+        {
+          "url": "https://git-scm.com/book/ru/v2",
+          "explanation": "GIT"
+        }
+      ]
+    },
+    {
+      "name": "JS",
+      "urls": [
+        {
+          "url": "https://starkovden.github.io/ ",
+          "explanation": "API"
+        },
+        {
+          "url": "https://metanit.com/web/nodejs/",
+          "explanation": "Node.js"
+        },
+        {
+          "url": "https://learn.javascript.ru/",
+          "explanation": "JavaScript"
+        }
+      ]
+    },
+    {
+      "name": ".NET",
+      "urls": [
+        {
+          "url": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+          "explanation": "C#"
+        },
+        {
+          "url": "https://metanit.com/sharp/aspnet5/1.1.php",
+          "explanation": ".NET"
+        },
+        {
+          "url": "https://git-scm.com/book/ru/v2",
+          "explanation": "GIT"
+        }
+      ]
+    },
+    {
+      "name": "Python",
+      "urls": [
+        {
+          "url": "https://realpython.com/",
+          "explanation": "Python"
+        },
+        {
+          "url": "https://www.tutorialspoint.com/django/index.htm",
+          "explanation": "Django"
+        },
+        {
+          "url": "https://www.tutorialspoint.com/docker/index.htm",
+          "explanation": "Docker"
+        }
+      ]
+    }
+  ]
+}

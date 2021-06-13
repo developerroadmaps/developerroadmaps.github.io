@@ -1,0 +1,9 @@
+{
+  "name": "diplom",
+  "version": "1.0.0",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "jsdom": "^16.5.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
